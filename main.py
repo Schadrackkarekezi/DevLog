@@ -32,7 +32,6 @@ async def lifespan(_app: FastAPI):
 app = FastAPI(lifespan=lifespan)
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
-app.mount("/media", StaticFiles(directory="media"), name="media")
 
 templates = Jinja2Templates(directory="templates")
 
@@ -66,7 +65,6 @@ async def home(request: Request, db: Annotated[AsyncSession, Depends(get_db)]):
             "has_more": has_more,
         },
     )
-
 
 @app.get("/posts/{post_id}", include_in_schema=False)
 async def post_page(
