@@ -1,5 +1,13 @@
 {
     "editor.inlineSuggest.experimental.showOnSuggestConflict": "always",
     "editor.inlineSuggest.triggerCommandOnProviderChange": true,
-    "editor.suggest.showStatusBar": true
+    "editor.suggest.showStatusBar": true,
+
+    "ruff.lint.ignore": ["I001"],
+
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    }
 }
