@@ -1,6 +1,5 @@
 import uuid
 from io import BytesIO
-from pathlib import Path
 
 import boto3
 from PIL import Image, ImageOps
